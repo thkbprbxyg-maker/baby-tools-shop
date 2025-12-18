@@ -1,31 +1,56 @@
-# 🍼 Baby Tools Shop – Django Demo Projekt
+# Baby Tools Shop – Django Server Project
 
-Ein einfacher Online-Shop für Babyprodukte, entwickelt mit **Django** und **Docker**.  
-Das Projekt dient als Lern- und Demo-Projekt (Admin-Bereich, Produkte, Kategorien, Login).
-
----
-
-## 🚀 Features
-
-- Benutzerregistrierung & Login
-- Admin-Backend (Produkte & Kategorien)
-- Produktübersicht mit Bildern
-- Docker-Setup für einfachen Start
-- Deutsche Benutzeroberfläche
+A simple online shop for baby products, built with **Django** and deployed on a **Linux VPS**.  
+This project was created as part of a **server & deployment module** to demonstrate backend development, server setup, and public deployment.
 
 ---
 
-## 🛠️ Tech Stack
+## Live Demo
 
-- Python 3.10
-- Django 4.0.2
-- Docker
-- SQLite (lokal, Demo)
+**Project URL:**  
+http://46.224.26.224:8000
 
 ---
 
-## ▶️ Projekt starten
+## Features
 
-### 1. Docker Image bauen
+- User registration & login
+- Product and category management
+- Admin dashboard (Django Admin)
+- Product overview with images
+- Server-side database
+- Public access via VPS & IP address
+
+---
+
+## Tech Stack
+
+- **Python 3.12**
+- **Django 4.0.2**
+- **SQLite** (server-side, demo purposes)
+- **Linux VPS (Hetzner)**
+- **UFW Firewall**
+- **SSH deployment**
+
+---
+
+## Server & Deployment
+
+- The application is deployed on a **Virtual Private Server (VPS)**.
+- The Django development server runs on **port 8000**.
+- Firewall rules allow external access to the application.
+- Products and categories are managed via the Django admin interface.
+- The database is hosted on the server and independent from the local environment.
+
+---
+
+## Run Locally
+
 ```bash
-docker build -t baby-tools-shop .
+git clone https://github.com/thkbprbxyg-maker/baby-tools-shop.git
+cd baby-tools-shop
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
