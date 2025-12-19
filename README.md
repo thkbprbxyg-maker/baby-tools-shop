@@ -7,8 +7,7 @@ This project was created as part of a **server & deployment module** to demonstr
 
 ## Live Demo
 
-**Project URL:**  
-http://46.224.26.224:8000
+
 
 ---
 
