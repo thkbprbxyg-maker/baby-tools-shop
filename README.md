@@ -16,6 +16,9 @@ It is containerized with Docker to allow an easy and reproducible setup.
 
  ## Quickstart
  Follow these steps to run the project locally using Docker:
+ - Docker
+ - Docker compose
+ - Python 3.9
 
 ### 1. Clone the repository
 ```bash
