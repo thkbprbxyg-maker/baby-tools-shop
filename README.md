@@ -1,8 +1,5 @@
 # Baby Tools Shop – Django Server Project
 
-
-
-
 Baby Tools Shop is a simple e-commerce demo application built with Django.  
 The project is intended as a learning and demonstration project and includes user authentication, product and category management, and an admin interface.  
 It is containerized with Docker to allow an easy and reproducible setup.
