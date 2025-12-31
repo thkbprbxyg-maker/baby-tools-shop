@@ -8,11 +8,9 @@ It is containerized with Docker to allow an easy and reproducible setup.
 
 
  ## Table of Contents
-- [Description](#description)
 - [Prerequisites](#prerequisites)
 - [Quickstart](#quickstart)
 - [Usage](#usage)
-- [Further Information](#further-information)
 
  ## Quickstart
  Follow these steps to run the project locally using Docker:
@@ -28,7 +26,7 @@ cd baby-tools-shop
 
 ### 2. Create environment file
 ```bash
-cp  example.env
+cp example.env .env
 ```
 
 
@@ -47,6 +45,18 @@ docker run -p 8000:8000 baby-tools-shop
 Open your browser and navigate to:  
 (http://<your_ip>:8000)
 
+
+## Prerequisites
+
+To run this project locally, the following requirements must be installed:
+
+- **Docker** (latest stable version)
+- **Git**
+- **Python 3.9** (required by the Docker image and Django version)
+
+No local Django installation is required, as the application runs inside a Docker container.
+
+
  ## Usage
 
 This section explains how to build, run, stop, and configure the application using Docker.
@@ -56,11 +66,14 @@ From the project root directory, run:
 
 ```bash
 docker build -t baby-tools-shop .
+```
 
-**2.⁠ ⁠Run the application**
+**2.⁠ ⁠Run the application** 
 
 Start the container and expose the application on port 8000:
+```bash
 docker run --rm -p 8000:8000 baby-tools-shop
+```
 
 **Open the application in your browser:**
 	•	http://localhost:8000
@@ -69,20 +82,28 @@ docker run --rm -p 8000:8000 baby-tools-shop
 **3.⁠ ⁠Stop the application**
 
 To stop the running container, press:
+```bash
 Ctrl+C
+```
 
 **4.⁠ ⁠Run the container in background (optional)**
 
 You can also run the container in detached mode:
+```bash
 docker run -d --name baby-tools-shop --rm -p 8000:8000 baby-tools-shop
+```
 
 To stop it later, run:
-docker stop baby-tools-shop
+```bash
+ docker stop baby-tools-shop
+```
 
 **5.⁠ ⁠Use a different port (optional)**
 
 If port 8000 is already in use, you can bind a different host port (for example 8025):
+```bash
 docker run --rm -p 8025:8000 baby-tools-shop
+```
 
 Then open:
 	•	http://localhost:8025
@@ -90,8 +111,10 @@ Then open:
 **6.⁠ ⁠Create a Django superuser**
 
 To access the Django admin interface, create a superuser inside the running container:
+```bash
 docker ps
 docker exec -it <container_id> python manage.py createsuperuser
+```
 
 Follow the prompts to set username, email, and password.
 
